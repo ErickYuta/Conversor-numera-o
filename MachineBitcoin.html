@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="imagem">
+    <div class="menu">
+
+            <h1>Marise's Machine</h1>
+
+
+        <div class="base">
+            <ul>
+                <li onclick="aparecer_octal()" type="checkbox">
+                    Octal
+                </li>
+                <li onclick="aparecer_hexa()" type="checkbox">
+                    Hexadecimal
+                </li>
+                <li onclick="aparecer_bin()" type="checkbox">
+                    Binário
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+        
+    <div class="corpo">
+
+        <div class="decimal" >
+            <h3>Decimal</h3>
+            <input id="demo1" type="text" placeholder="Digite o valor em decimal">
+        </div>
+        
+        <div class="octal" style="display: none;" id="demo2_2">
+            <h3 style="display: none;" id="demo2_1">Octal</h3>
+            <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); height: 40px; font-weight: 500;" id="demo2"></div>
+        </div>
+
+        <div class="hexadecimal" style="display: none;" id="demo3_2">
+            <h3 style="display: none;" id="demo3_1">Hexadecimal</h3>
+            <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); height: 40px; font-weight: 500;" id="demo3"></div>
+        </div>
+
+        <div class="binario" style="display: none;" id="demo4_2">
+            <h3 style="display: none;" id="demo4_1">Binário</h3>
+            <textarea style="display: none; background-color: #dcdcdc; border-radius: 5px; display: flex; padding: 50px; color: rgb(5, 5, 5); width: 60%; height: 50px; font-weight: 500;" id="demo4"></textarea>
+        </div>
+            
+
+    </div>
+    <div class="botoes">
+        <button onclick="converter()">Converter</button>
+    </div>
+</div>
+</body>
+</html>
+
+
+<script>
+
+    function converter() {
+        
+    var decimal = Number (demo1.value);
+    
+    let octal = decimal.toString(8);
+    
+    let hexadecimal = decimal.toString(16);
+    
+    let binaria = decimal.toString(2);
+    
+    console.log (decimal);
+    console.log (octal);
+    console.log (hexadecimal);
+    console.log (binaria);
+    
+    document.getElementById("demo1").innerHTML = ` ${decimal}`;
+    document.getElementById("demo2").innerHTML = ` ${octal}`;
+    document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+    document.getElementById("demo4").innerHTML = ` ${binaria}`;
+    
+    
+    }
+    
+    function aparecer_bin() {
+        if(demo4.style.display == 'none'){
+            demo4.style.display = 'flex'
+            demo4_1.style.display = 'flex'
+            demo4_2.style.display = 'flex'
+        }else{
+            demo4.style.display = 'none'
+            demo4_1.style.display = 'none'
+            demo4_2.style.display = 'none'
+        }
+        
+    }
+    
+    function aparecer_hexa() {
+        if(demo3.style.display == 'none'){
+            demo3.style.display = 'flex'
+            demo3_1.style.display = 'flex'
+            demo3_2.style.display = 'flex'
+        }else{
+            demo3.style.display = 'none'
+            demo3_1.style.display = 'none'
+            demo3_2.style.display = 'none'
+        }
+
+    }
+    
+    function aparecer_octal() {
+        if(demo2.style.display == 'none'){
+            demo2.style.display = 'flex'
+            demo2_1.style.display = 'flex'
+            demo2_2.style.display = 'flex'
+        }else{
+            demo2.style.display = 'none'
+            demo2_1.style.display = 'none'
+            demo2_2.style.display = 'none'
+        }
+    }
+
+</script>

@@ -3,56 +3,60 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+}
+
+.imagem{
+    background-image: url(Imagem/Logo.webp);
+    height: 120vh;
+    width: 222vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 .menu{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
     gap: 20px;
     color: rgb(255, 255, 255);
     border: solid 3px black;
     height: 50vh;
-
-}
-
-.menu > .banner-fundo{
-    background-image: url(Imagem/Banner.jpg);
-    height: 19vh;
-    width: 250vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-    position: absolute;
-    height: 50vh;
-
-
+    box-shadow: 1px 1px 10px 10px black;
 }
 
 .menu > h1{
-    font-size: 80px;
+    box-shadow: 1px 1px 10px 10px black;
 }
+
 .menu > .base > ul{
     list-style-type: none;
     display: flex;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.4);
 }
 
 .menu > .base > ul > li{
     padding: 10px;
     font-size: small;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 8px;
+    margin: 30px;
+    transition: 0.5s;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.menu > .base > ul > li:hover{
+    cursor: pointer;
+    background-color: black;
+    transition: 0.5s;
 }
 
 .corpo{
-    background-color: rgb(0, 0, 0);
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 50vh;
 }
 
 .corpo > h3{
@@ -63,4 +67,91 @@
     background-color: white;
     border-radius: 8px;
     border: 5px solid white;
+}
+
+.corpo > .decimal{
+    background-image: url(Imagem/Banner.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.corpo > .decimal > h3{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.corpo > .decimal > input{
+    margin: auto;
+    height: 80px;
+    width: 200px;
+}
+
+.corpo > .octal{
+    background-image: url(Imagem/Banner.jpg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.corpo > .octal > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo > .octal > div{
+    width: 50%;
+    margin: auto;
+}
+
+.corpo > .hexadecimal{
+    background-image: url(Imagem/Banner.jpg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.corpo > .hexadecimal > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo > .hexadecimal > div{
+    width: 50%;
+    margin: auto;
+}
+
+.corpo > .binario{
+    background-image: url(Imagem/Banner.jpg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.corpo > .binario > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo > .binario > textarea{
+    width: 50%;
+    margin: auto;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.botoes > button{
+    background-color: white;
+    border: solid 2px whitesmoke;
+    border-radius: 8px;
+    padding: 10px;
 }
