@@ -64,14 +64,14 @@
             // converte o valor decimal para Octal, Hexadecimal e Binário
             var decimal = parseInt(binario,2);
 
-            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`
+            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`.toUpperCase();
         }
         function converterOctal(){
             var binario = Number(ipt_valor.value);
             var decimal = parseInt(binario, 2);
             var octal = decimal.toString(8);
 
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`
+            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`.toUpperCase();
 
         }
         function converterHexadecimal(){

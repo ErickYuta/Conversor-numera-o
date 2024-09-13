@@ -63,14 +63,14 @@
             var octal = Number(ipt_valor.value);
             var decimal = parseInt(octal, 8);
 
-            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`
+            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`.toUpperCase();
         }
         function converterBinario(){
             var octal = Number(ipt_valor.value);
             var decimal = parseInt(octal,8);
             var binario = decimal.toString(2);
 
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${binario} <br>`
+            div_mensagem.innerHTML += `Valor Convertido em Octal: ${binario} <br>`.toUpperCase();
 
         }
         function converterHexadecimal(){

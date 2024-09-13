@@ -40,14 +40,14 @@
             var hexadecimal = ipt_valor.value;
             var decimal = parseInt(hexadecimal, 16);
 
-            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`
+            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`.toUpperCase();
         }
         function converterBinario(){
             var hexadecimal = ipt_valor.value;
             var decimal = parseInt(hexadecimal, 16)
             var binario = decimal.toString(2);
 
-            div_mensagem.innerHTML += `Valor Convertido em Binário: ${binario} <br>`
+            div_mensagem.innerHTML += `Valor Convertido em Binário: ${binario} <br>`.toUpperCase();
 
         }
         function converterOctal(){
@@ -55,7 +55,7 @@
             var decimal = parseInt(hexadecimal, 16);
             var octal = decimal.toString(8);
 
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal}`
+            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal}`.toUpperCase();
         }
     </script>
 </body>
