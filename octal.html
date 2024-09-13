@@ -15,7 +15,7 @@
 
         <h3>Selecione uma base para realizar a conversão</h3>
 
-        <a href="./marises-machine-comentado.html">Decimal</a>
+        <a href="./decimal.html">Decimal</a>
         <a href="./binario.html">Binário</a>
         <a href="./octal.html">Octal</a>
         <a href="./hexadecimal.html">Hexadecimal</a>
@@ -78,7 +78,7 @@
             var decimal = parseInt(octal,8)
             var hexadecimal = decimal.toString(16);
 
-            div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal}`
+            div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal}`.toUpperCase();
         }
     </script>
 </body>
