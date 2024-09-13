@@ -61,22 +61,23 @@
         function converterDecimal() {
             // obtém o valor decimal da entrada
             var binario = Number(ipt_valor.value);
-
             // converte o valor decimal para Octal, Hexadecimal e Binário
-            var decimal = binario.toString(10);
+            var decimal = parseInt(binario,2);
 
-            div_mensagem.innerHTML = `Valor Convertido em Binario: ${decimal} <br>`
+            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`
         }
         function converterOctal(){
             var binario = Number(ipt_valor.value);
-            var octal = binario.toString(8);
+            var decimal = parseInt(binario, 2);
+            var octal = decimal.toString(8);
 
             div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`
 
         }
         function converterHexadecimal(){
             var binario = Number(ipt_valor.value);
-            var hexadecimal = binario.toString(16);
+            var decimal = parseInt(binario, 2);
+            var hexadecimal = decimal.toString(16);
 
             div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal}`
         }
