@@ -37,21 +37,21 @@
         // função para realizar a conversão
         function converterDecimal() {
             // obtém o valor decimal da entrada
-            var hexadecimal= Number(ipt_valor.value);
+            var hexadecimal = ipt_valor.value;
             var decimal = parseInt(hexadecimal, 16);
 
             div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`
         }
         function converterBinario(){
-            var hexadecimal = Number(ipt_valor.value);
+            var hexadecimal = ipt_valor.value;
             var decimal = parseInt(hexadecimal, 16)
-            var binario = hexadecimal.toString(2);
+            var binario = decimal.toString(2);
 
             div_mensagem.innerHTML += `Valor Convertido em Binário: ${binario} <br>`
 
         }
         function converterOctal(){
-            var hexadecimal = Number(ipt_valor.value);
+            var hexadecimal = ipt_valor.value;
             var decimal = parseInt(hexadecimal, 16);
             var octal = decimal.toString(8);
 
