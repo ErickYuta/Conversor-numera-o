@@ -27,30 +27,7 @@
 
         <br><br>
 
-        <!-- <h3>Converter para:</h3> <!-- título para indicar as opções de conversão -->
-
-        <!-- checkbox e texto para converter para Octal 
-        <input onclick="aparecer_octal()" type="checkbox"><b>Octal</b>
-        <br> -->
-        <!-- div para exibir o resultado da conversão para Octal 
-        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); width: 15%; height: 40px; font-weight: 500;" id="demo2"></div>
-
-        <br><br>
-
-        <input onclick="aparecer_hexa()" type="checkbox"><b>Hexadecimal</b>
-        <br>
-        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); width: 15%; height: 40px; font-weight: 500;" id="demo3"></div>
-        
-        <br><br>
-
-        <input onclick="aparecer_bin()" type="checkbox"><b>Binário</b>
-        <br>
-        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(5, 5, 5); width: 60%; height: 50px; font-weight: 500;" id="demo4"></div>
-
-        <br><br> -->
-
-        <!-- botão para iniciar a conversão -->
-        <button onclick="converterBinario()">Converter para Binário</button>
+                <button onclick="converterBinario()">Converter para Binário</button>
         <button onclick="converterOctal()">Converter para Octal</button>
         <button onclick="converterHexadecimal()">Converter para Hexadecimal</button>
         <br><br><br>
@@ -65,13 +42,13 @@
             // converte o valor decimal para Octal, Hexadecimal e Binário
             var binario = decimal.toString(2);
 
-            div_mensagem.innerHTML = `Valor Convertido em Binario: ${binario} <br>`
+            div_mensagem.innerHTML = `Valor Convertido em Binario: ${binario} <br>`.toUpperCase();
         }
         function converterOctal(){
             var decimal = Number(demo1.value);
             var octal = decimal.toString(8);
 
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`
+            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`.toUpperCase();
 
         }
         function converterHexadecimal(){
