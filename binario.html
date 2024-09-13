@@ -23,7 +23,7 @@
 
 
         <h3>Binário</h3> <!-- título para indicar a entrada em decimal -->
-        <input id="demo1" type="text" placeholder="Digite o valor em binário"> <!-- campo de entrada para o valor decimal -->
+        <input id="ipt_valor" type="text" placeholder="Digite o valor em binário"> <!-- campo de entrada para o valor decimal -->
 
         <br><br>
 
@@ -60,23 +60,23 @@
         // função para realizar a conversão
         function converterDecimal() {
             // obtém o valor decimal da entrada
-            var binario = Number (demo1.value);
+            var binario = Number(ipt_valor.value);
 
             // converte o valor decimal para Octal, Hexadecimal e Binário
             var decimal = binario.toString(10);
 
-            div_mensagem.innerHTML = `Valor Convertido em Binario: ${binario} <br>`
+            div_mensagem.innerHTML = `Valor Convertido em Binario: ${decimal} <br>`
         }
         function converterOctal(){
-            var decimal = Number(demo1.value);
-            var octal = decimal.toString(8);
+            var binario = Number(ipt_valor.value);
+            var octal = binario.toString(8);
 
             div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`
 
         }
         function converterHexadecimal(){
-            var decimal = Number(demo1.value);
-            var hexadecimal = decimal.toString(16);
+            var binario = Number(ipt_valor.value);
+            var hexadecimal = binario.toString(16);
 
             div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal}`
         }
