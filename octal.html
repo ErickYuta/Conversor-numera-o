@@ -18,7 +18,7 @@
         <a href="./marises-machine-comentado.html">Decimal</a>
         <a href="./binario.html">Binário</a>
         <a href="./octal.html">Octal</a>
-        <a href="./hexadecmal.html">Hexadecimal</a>
+        <a href="./hexadecimal.html">Hexadecimal</a>
 
 
 
@@ -52,7 +52,7 @@
         <!-- botão para iniciar a conversão -->
         <button onclick="converterDecimal()">Converter para Decimal</button>
         <button onclick="converterBinario()">Converter para Binário</button>
-        <button onclick="converterHexadeimal()">Converter para Hexadecimal</button>
+        <button onclick="converterHexadecimal()">Converter para Hexadecimal</button>
         <div id="div_mensagem"></div>
     </center>
 
@@ -67,14 +67,16 @@
         }
         function converterBinario(){
             var octal = Number(ipt_valor.value);
-            var octal = binario.toString(2);
+            var decimal = parseInt(octal,8);
+            var binario = decimal.toString(2);
 
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`
+            div_mensagem.innerHTML += `Valor Convertido em Octal: ${binario} <br>`
 
         }
         function converterHexadecimal(){
-            var binario = Number(ipt_valor.value);
-            var hexadecimal = binario.toString(16);
+            var octal = Number(ipt_valor.value);
+            var decimal = parseInt(octal,8)
+            var hexadecimal = decimal.toString(16);
 
             div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal}`
         }
