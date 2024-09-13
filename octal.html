@@ -23,7 +23,7 @@
 
 
         <h3>Octal</h3> <!-- título para indicar a entrada em decimal -->
-        <input id="demo1" type="text" placeholder="Digite o valor em octal"> <!-- campo de entrada para o valor decimal -->
+        <input id="ipt_valor" type="text" placeholder="Digite o valor em octal"> <!-- campo de entrada para o valor decimal -->
 
         <br><br>
 
@@ -50,9 +50,9 @@
         <br><br> -->
 
         <!-- botão para iniciar a conversão -->
-        <button onclick="converter()">Converter para Decimal</button>
-        <button onclick="converter()">Converter para Binário</button>
-        <button onclick="converter()">Converter para Hexadecimal</button>
+        <button onclick="converterDecimal()">Converter para Decimal</button>
+        <button onclick="converterBinario()">Converter para Binário</button>
+        <button onclick="converterHexadeimal()">Converter para Hexadecimal</button>
         <div id="div_mensagem"></div>
     </center>
 
@@ -61,14 +61,13 @@
         function converterDecimal() {
             // obtém o valor decimal da entrada
             var octal = Number(ipt_valor.value);
-            // converte o valor decimal para Octal, Hexadecimal e Binário
-            var decimal = octal.toString(10);
+            var decimal = parseInt(octal, 8);
 
             div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`
         }
         function converterBinario(){
-            var binario = Number(ipt_valor.value);
-            var octal = binario.toString(8);
+            var octal = Number(ipt_valor.value);
+            var octal = binario.toString(2);
 
             div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`
 
