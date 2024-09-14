@@ -155,3 +155,94 @@
     border-radius: 8px;
     padding: 10px;
 }
+
+.corpo2{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 50vh;
+}
+
+.corpo2 > h3{
+    font-size: 20px;
+}
+
+.corpo2 > input{
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 5px solid white;
+}
+
+.corpo2 > .decimal2{
+    background-image: url(Imagem/Banner.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.corpo2 > .decimal2 > h3{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.corpo2 > .decimal2 > input{
+    margin: auto;
+    height: 80px;
+    width: 200px;
+}
+
+.corpo2 > .octal2{
+    background-image: url(Imagem/Banner.jpg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.corpo2 > .octal2 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo2 > .octal2 > div{
+    width: 50%;
+    margin: auto;
+}
+
+.corpo2 > .hexadecimal2{
+    background-image: url(Imagem/Banner.jpg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.corpo2 > .hexadecimal2 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo2 > .hexadecimal2 > div{
+    width: 50%;
+    margin: auto;
+}
+
+.corpo2 > .binario2{
+    background-image: url(Imagem/Banner.jpg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+}
+
+.corpo2 > .binario2 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo2 > .binario2 > textarea{
+    width: 50%;
+    margin: auto;
+}
