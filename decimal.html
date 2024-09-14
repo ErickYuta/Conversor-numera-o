@@ -3,34 +3,34 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+<body> <!-- definição da cor de fundo da página -->
 
-<body bgcolor="gray"> <!-- definição da cor de fundo da página -->
-
-    <center> <!-- elemento para centralizar o conteúdo -->
+    <center > <!-- elemento para centralizar o conteúdo -->
+    <div class="header">
         <h1>Marise's Machine</h1> <!-- Título da página -->
-
-        <br><br> <!-- quebra de linha para espaçamento -->
-
         <h3>Selecione uma base para realizar a conversão</h3>
+            <div class="navegation">
+        <a href="./decimal.html" class="links">Decimal</a>
+        <a href="./binario.html" class="links">Binário</a>
+        <a href="./octal.html" class="links">Octal</a>
+        <a href="./hexadecimal.html" class="links">Hexadecimal</a>
+            </div>
+    </div>
 
-        <a href="./decimal.html">Decimal</a>
-        <a href="./binario.html">Binário</a>
-        <a href="./octal.html">Octal</a>
-        <a href="./hexadecimal.html">Hexadecimal</a>
-
-
-
+    <div class="container">
         <h3>Decimal</h3> <!-- título para indicar a entrada em decimal -->
-        <input id="demo1" type="text" placeholder="Digite o valor Decimal"> <!-- campo de entrada para o valor decimal -->
+        <input id="ipt_valor" type="number" placeholder="Digite o valor Decimal"> <!-- campo de entrada para o valor decimal -->
 
         <br><br>
 
-                <button onclick="converterBinario()">Converter para Binário</button>
-        <button onclick="converterOctal()">Converter para Octal</button>
-        <button onclick="converterHexadecimal()">Converter para Hexadecimal</button>
+        <button onclick="converterBinario()" class="button">Converter para Binário</button>
+        <button onclick="converterOctal()" class="button">Converter para Octal</button>
+        <button onclick="converterHexadecimal()" class="button">Converter para Hexadecimal</button>
         <br><br><br>
+    </div>
         <div id="div_mensagem"></div>
     </center>
 
@@ -38,24 +38,24 @@
         // função para realizar a conversão
         function converterBinario() {
             // obtém o valor decimal da entrada
-            var decimal = Number (demo1.value);
+            var decimal = Number(ipt_valor.value);
             // converte o valor decimal para Octal, Hexadecimal e Binário
             var binario = decimal.toString(2);
 
-            div_mensagem.innerHTML = `Valor Convertido em Binario: ${binario} <br>`.toUpperCase();
+            div_mensagem.innerHTML = `Valor Convertido em Binario: ${binario} <br>`
         }
         function converterOctal(){
-            var decimal = Number(demo1.value);
+            var decimal = Number(ipt_valor.value);
             var octal = decimal.toString(8);
 
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`.toUpperCase();
+            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`
 
         }
         function converterHexadecimal(){
-            var decimal = Number(demo1.value);
+            var decimal = Number(ipt_valor.value);
             var hexadecimal = decimal.toString(16);
 
-            div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal}`.toUpperCase();
+            div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal.toUpperCase()}`
         }
     </script>
 </body>

@@ -3,56 +3,36 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
-<body bgcolor="gray"> <!-- definição da cor de fundo da página -->
+<body> <!-- definição da cor de fundo da página -->
 
     <center> <!-- elemento para centralizar o conteúdo -->
+    <div class="header">
         <h1>Marise's Machine</h1> <!-- Título da página -->
-
-        <br><br> <!-- quebra de linha para espaçamento -->
-
         <h3>Selecione uma base para realizar a conversão</h3>
+            <div class="navegation">
+        <a href="./decimal.html" class="links">Decimal</a>
+        <a href="./binario.html" class="links">Binário</a>
+        <a href="./octal.html" class="links">Octal</a>
+        <a href="./hexadecimal.html" class="links">Hexadecimal</a>
+            </div>
+    </div>
 
-        <a href="./decimal.html">Decimal</a>
-        <a href="./binario.html">Binário</a>
-        <a href="./octal.html">Octal</a>
-        <a href="./hexadecimal.html">Hexadecimal</a>
-
-
-
+    <div class="container">
         <h3>Octal</h3> <!-- título para indicar a entrada em decimal -->
-        <input id="ipt_valor" type="text" placeholder="Digite o valor em Octal"> <!-- campo de entrada para o valor decimal -->
-
-        <br><br>
-
-        <!-- <h3>Converter para:</h3> <!-- título para indicar as opções de conversão -->
-
-        <!-- checkbox e texto para converter para Octal 
-        <input onclick="aparecer_octal()" type="checkbox"><b>Octal</b>
-        <br> -->
-        <!-- div para exibir o resultado da conversão para Octal 
-        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(0, 0, 0); width: 15%; height: 40px; font-weight: 500;" id="demo2"></div>
-
-        <br><br>
-
-        <input onclick="aparecer_hexa()" type="checkbox"><b>Hexadecimal</b>
-        <br>
-        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(7, 7, 7); width: 15%; height: 40px; font-weight: 500;" id="demo3"></div>
+        <input id="ipt_valor" type="number" placeholder="Digite o valor em Octal"> <!-- campo de entrada para o valor decimal -->
         
         <br><br>
-
-        <input onclick="aparecer_bin()" type="checkbox"><b>Binário</b>
-        <br>
-        <div style="display: none; background-color: #dcdcdc; border-radius: 5px; padding: 5px; color: rgb(5, 5, 5); width: 60%; height: 50px; font-weight: 500;" id="demo4"></div>
-
-        <br><br> -->
-
+        
         <!-- botão para iniciar a conversão -->
-        <button onclick="converterDecimal()">Converter para Decimal</button>
-        <button onclick="converterBinario()">Converter para Binário</button>
-        <button onclick="converterHexadecimal()">Converter para Hexadecimal</button>
+        <button onclick="converterDecimal()" class="button">Converter para Decimal</button>
+        <button onclick="converterBinario()" class="button">Converter para Binário</button>
+        <button onclick="converterHexadecimal()" class="button">Converter para Hexadecimal</button>
+        <br><br><br>
+    </div>
         <div id="div_mensagem"></div>
     </center>
 
@@ -63,14 +43,14 @@
             var octal = Number(ipt_valor.value);
             var decimal = parseInt(octal, 8);
 
-            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`.toUpperCase();
+            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`
         }
         function converterBinario(){
             var octal = Number(ipt_valor.value);
             var decimal = parseInt(octal,8);
             var binario = decimal.toString(2);
 
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${binario} <br>`.toUpperCase();
+            div_mensagem.innerHTML += `Valor Convertido em Octal: ${binario} <br>`
 
         }
         function converterHexadecimal(){
@@ -78,7 +58,7 @@
             var decimal = parseInt(octal,8)
             var hexadecimal = decimal.toString(16);
 
-            div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal}`.toUpperCase();
+            div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal.toUpperCase()}`
         }
     </script>
 </body>
