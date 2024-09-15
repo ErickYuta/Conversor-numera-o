@@ -11,7 +11,6 @@
     height: 120vh;
     width: 222vh;
     background-repeat: no-repeat;
-    background-size: 100%;
     background-size: cover;
     z-index: -1;
 }
@@ -53,11 +52,29 @@
     transition: 0.5s;
 }
 
+.box-slider{
+    width: 1200px;
+    max-width: 100%;
+    overflow: auto;
+    margin: 30px auto;  
+    scroll-behavior: smooth;
+    transition:  0.5s ease;
+}
+
+.box-slider::-webkit-scrollbar{
+    display: none;
+}
+
+.slider{
+    display: flex;
+}
+
 .corpo{
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 50vh;
+    width: 100%;
 }
 
 .corpo > h3{
@@ -76,6 +93,7 @@
     flex-direction: column;
     justify-content: center;
     box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
 }
 
 .corpo > .decimal > h3{
@@ -91,11 +109,12 @@
 }
 
 .corpo > .octal{
-    background-image: url(Imagem/Banner.jpg);
+    background-image: url(Imagem/BannerResultado.png);
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
 }
 
 .corpo > .octal > h3{
@@ -109,11 +128,12 @@
 }
 
 .corpo > .hexadecimal{
-    background-image: url(Imagem/Banner.jpg);
+    background-image: url(Imagem/BannerResultado.png);
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
 }
 
 .corpo > .hexadecimal > h3{
@@ -127,11 +147,12 @@
 }
 
 .corpo > .binario{
-    background-image: url(Imagem/Banner.jpg);
+    background-image: url(Imagem/BannerResultado.png);
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
 }
 
 .corpo > .binario > h3{
@@ -144,17 +165,18 @@
     margin: auto;
 }
 
-.botoes{
+.direction{
     display: flex;
     justify-content: center;
     align-items: baseline;
+    gap: 10px;
 }
 
-.botoes > button{
+.direction > button{
     background-color: white;
     border: solid 2px whitesmoke;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: 80px;
+    padding: 15px;
 }
 
 .corpo2{
@@ -162,44 +184,47 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 50vh;
+    width: 100%;
 }
 
 .corpo2 > h3{
     font-size: 20px;
 }
 
-.corpo2 > input{
+.corpo2 > textarea{
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     border: 5px solid white;
 }
 
-.corpo2 > .decimal2{
+.corpo2 > .binario2{
     background-image: url(Imagem/Banner.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
 }
 
-.corpo2 > .decimal2 > h3{
+.corpo2 > .binario2 > h3{
     display: flex;
     justify-content: center;
     font-size: 50px;
 }
 
-.corpo2 > .decimal2 > input{
+.corpo2 > .binario2 > textarea{
     margin: auto;
     height: 80px;
     width: 200px;
 }
 
 .corpo2 > .octal2{
-    background-image: url(Imagem/Banner.jpg);
+    background-image: url(Imagem/BannerResultado.png);
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
 }
 
 .corpo2 > .octal2 > h3{
@@ -213,11 +238,12 @@
 }
 
 .corpo2 > .hexadecimal2{
-    background-image: url(Imagem/Banner.jpg);
+    background-image: url(Imagem/BannerResultado.png);
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
 }
 
 .corpo2 > .hexadecimal2 > h3{
@@ -230,20 +256,218 @@
     margin: auto;
 }
 
-.corpo2 > .binario2{
-    background-image: url(Imagem/Banner.jpg);
+.corpo2 > .decimal2{
+    background-image: url(Imagem/BannerResultado.png);
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
 }
 
-.corpo2 > .binario2 > h3{
+.corpo2 > .decimal2 > h3{
     text-align: center;
     font-size: 50px;
 }
 
-.corpo2 > .binario2 > textarea{
+.corpo2 > .decimal2 > div{
+    width: 50%;
+    margin: auto;
+}
+
+/*  */
+
+.corpo3{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 50vh;
+    width: 100%;
+}
+
+.corpo3 > h3{
+    font-size: 20px;
+}
+
+.corpo3 > input{
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 5px solid white;
+}
+
+.corpo3 > .octal3{
+    background-image: url(Imagem/Banner.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
+}
+
+.corpo3 > .octal3 > h3{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.corpo3 > .octal3 > input{
+    margin: auto;
+    height: 80px;
+    width: 200px;
+}
+
+.corpo3 > .hexadecimal3{
+    background-image: url(Imagem/BannerResultado.png);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
+}
+
+.corpo3 > .hexadecimal3 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo3 > .hexadecimal3 > div{
+    width: 50%;
+    margin: auto;
+}
+
+.corpo3 > .binario3{
+    background-image: url(Imagem/BannerResultado.png);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
+}
+
+.corpo3 > .binario3 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo3 > .binario3 > textarea{
+    width: 50%;
+    margin: auto;
+}
+
+.corpo3 > .decimal3{
+    background-image: url(Imagem/BannerResultado.png);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
+}
+
+.corpo3 > .decimal3 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo3 > .decimal3 > div{
+    width: 50%;
+    margin: auto;
+}
+
+/*  */
+
+
+.corpo4{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 50vh;
+    width: 100%;
+}
+
+.corpo4 > h3{
+    font-size: 20px;
+}
+
+.corpo4 > input{
+    background-color: white;
+    border-radius: 8px;
+    border: 5px solid white;
+}
+
+.corpo4 > .hexadecimal4{
+    background-image: url(Imagem/Banner.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
+}
+
+.corpo4 > .hexadecimal4 > h3{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.corpo4 > .hexadecimal4 > input{
+    margin: auto;
+    height: 80px;
+    width: 200px;
+}
+
+.corpo4 > .octal4{
+    background-image: url(Imagem/BannerResultado.png);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
+}
+
+.corpo4 > .octal4 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo4 > .octal4 > div{
+    width: 50%;
+    margin: auto;
+}
+
+.corpo4 > .decimal4{
+    background-image: url(Imagem/BannerResultado.png);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
+}
+
+.corpo4 > .decimal4 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo4 > .decimal4 > div{
+    width: 50%;
+    margin: auto;
+}
+
+.corpo4 > .binario4{
+    background-image: url(Imagem/BannerResultado.png);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px 10px black;
+    width: 300px;
+}
+
+.corpo4 > .binario4 > h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.corpo4 > .binario4 > textarea{
     width: 50%;
     margin: auto;
 }
