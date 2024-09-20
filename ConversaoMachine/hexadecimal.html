@@ -4,14 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Conversão Hexadecimal</title>
 </head>
 
 <body> <!-- definição da cor de fundo da página -->
 
     <center> <!-- elemento para centralizar o conteúdo -->
     <div class="header">
-        <h1>Marise's Machine</h1> <!-- Título da página -->
+        <h1>Bit's Machine</h1> <!-- Título da página -->
         <h3>Selecione uma base para realizar a conversão</h3>
             <div class="navegation">       
         <a a href="./decimal.html" class="links">Decimal</a>
@@ -32,8 +32,10 @@
         <button onclick="converterOctal()" class="button">Converter para Octal</button>
         <br><br><br>
     </div>
-        <div id="div_mensagem"></div>
-    </center>
+    <input type="number" id="decimalInput" class="ipt_conversor">
+    <input type="number" id="binarioInput" class="ipt_conversor">
+    <input type="text" id="octalInput" class="ipt_conversor">
+</center>
 
     <script>
         // função para realizar a conversão
@@ -42,14 +44,14 @@
             var hexadecimal = ipt_valor.value;
             var decimal = parseInt(hexadecimal, 16);
 
-            div_mensagem.innerHTML = `Valor Convertido em Decimal: ${decimal} <br>`
+            document.getElementById("decimalInput").value = decimal;  
         }
         function converterBinario(){
             var hexadecimal = ipt_valor.value;
             var decimal = parseInt(hexadecimal, 16)
             var binario = decimal.toString(2);
 
-            div_mensagem.innerHTML += `Valor Convertido em Binário: ${binario} <br>`
+            document.getElementById("binarioInput").value = binario;  
 
         }
         function converterOctal(){
@@ -57,7 +59,7 @@
             var decimal = parseInt(hexadecimal, 16);
             var octal = decimal.toString(8);
 
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal}`
+            document.getElementById("octalInput").value = octal;  
         }
     </script>
 </body>

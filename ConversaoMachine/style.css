@@ -1,5 +1,5 @@
 body{
-    background-image: url(/Imagem/tech.jpg);
+    background-image: url(tech.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -53,4 +53,7 @@ body{
 }
 #div_mensagem{
     color: white;
+}
+.ipt_conversor{
+    margin: 20px;
 }

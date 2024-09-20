@@ -4,13 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Conversão Decimal</title>
 </head>
 <body> <!-- definição da cor de fundo da página -->
 
     <center > <!-- elemento para centralizar o conteúdo -->
     <div class="header">
-        <h1>Marise's Machine</h1> <!-- Título da página -->
+        <h1>Bit's Machine</h1> <!-- Título da página -->
         <h3>Selecione uma base para realizar a conversão</h3>
             <div class="navegation">
         <a href="./decimal.html" class="links">Decimal</a>
@@ -31,7 +31,9 @@
         <button onclick="converterHexadecimal()" class="button">Converter para Hexadecimal</button>
         <br><br><br>
     </div>
-        <div id="div_mensagem"></div>
+    <input type="number" id="binarioInput" class="ipt_conversor">
+    <input type="number" id="octalInput" class="ipt_conversor">
+    <input type="text" id="hexadecimalInput" class="ipt_conversor">
     </center>
 
     <script>
@@ -39,23 +41,18 @@
         function converterBinario() {
             // obtém o valor decimal da entrada
             var decimal = Number(ipt_valor.value);
-            // converte o valor decimal para Octal, Hexadecimal e Binário
             var binario = decimal.toString(2);
-
-            div_mensagem.innerHTML = `Valor Convertido em Binario: ${binario} <br>`
+            document.getElementById("binarioInput").value = binario;  
         }
         function converterOctal(){
             var decimal = Number(ipt_valor.value);
             var octal = decimal.toString(8);
-
-            div_mensagem.innerHTML += `Valor Convertido em Octal: ${octal} <br>`
-
+            document.getElementById("octalInput").value = octal;
         }
         function converterHexadecimal(){
             var decimal = Number(ipt_valor.value);
             var hexadecimal = decimal.toString(16);
-
-            div_mensagem.innerHTML += `Valor Convertido em Hexadecimal: ${hexadecimal.toUpperCase()}`
+            document.getElementById("hexadecimalInput").value = hexadecimal.toUpperCase();
         }
     </script>
 </body>
