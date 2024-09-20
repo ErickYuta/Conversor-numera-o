@@ -8,11 +8,10 @@
 
 .imagem{
     background-image: url(Imagem/Logo.webp);
-    height: 120vh;
-    width: 222vh;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+    background-size: 100%;
 }
 
 .menu{
